@@ -1,0 +1,19 @@
+#Dùng '#' để bắt đầu một chú thích trong code
+import numpy # Gọi thư viện numpy
+from matplotlib import pyplot # Gọi thư viện pyplot từ matplotlib
+
+#chỉ cần khi bạn sử dụng ipython notebook
+%matplotlib inline 
+
+#số điểm lưới theo trục x và y
+nx = 11
+ny = 11
+
+#kích thước ô lưới 
+dx = 1./(nx-1) #tại sao lại là (nx-1)?
+dy = 1./(ny-1) # _____//______ (ny-1)?
+
+#dùng hàm linspace để chia lưới đều: chia đoạn 0, 1 bởi nx, ny điểm
+x = numpy.linspace(0, 1, nx) # Mảng (tập hợp) x gồm nx phần tử (điểm lưới) x[i] - i chạy từ 0 tới nx-1
+y = numpy.linspace(0, 1, ny) # Mảng y gồm ny phần tử (điểm lưới) y[j] - j chạy từ 0 tới ny-1
+x, y # Hiển thị mảng x,y
